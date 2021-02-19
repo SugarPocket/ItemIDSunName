@@ -2465,7 +2465,7 @@ public enum ItemIDSunName {
      * @param Damage 物品特殊值
      * @param Path   物品贴图路径
      */
-    private ItemIDSunName(String Name, int id, int Damage, String Path) {
+    ItemIDSunName(String Name, int id, int Damage, String Path) {
         this.ID = id;
         this.Name = Name;
         this.Damage = Damage;
@@ -2522,7 +2522,7 @@ public enum ItemIDSunName {
      * @return 根据物品ID获取物品贴图路径
      */
     public static String getIDByPath(int ID) {
-        return getIDByPath(ID + ":0");
+        return getIDByPath(ID, 0);
     }
 
 
@@ -2551,7 +2551,7 @@ public enum ItemIDSunName {
      * @return 根据物品ID获取物品名称
      */
     public static String getIDByName(int ID) {
-        return getIDByName(ID + ":0");
+        return getIDByName(ID, 0);
     }
 
     /**
